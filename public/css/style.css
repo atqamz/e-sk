@@ -1,0 +1,10 @@
+.form-signin .form-floating:focus-within,
+.form-signup .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input,
+.form-signup input {
+    margin-bottom: -1px;
+    border-radius: 0;
+}
