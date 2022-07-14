@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Surat extends Model
+class UserTerkait extends Model
 {
     use HasFactory;
 
@@ -13,23 +13,13 @@ class Surat extends Model
         'id'
     ];
 
-    public function kontens()
+    public function surat()
     {
-        return $this->hasMany(Konten::class);
-    }
-
-    public function lampirans()
-    {
-        return $this->hasMany(Lampiran::class);
+        return $this->belongsTo(Surat::class);
     }
 
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-
-    public function userTerkaits()
-    {
-        return $this->hasMany(UserTerkait::class);
     }
 }

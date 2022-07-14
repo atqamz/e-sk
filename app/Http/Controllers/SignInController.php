@@ -18,7 +18,7 @@ class SignInController extends Controller
     public function authenticate(Request $request)
     {
         $validatedData = $request->validate([
-            'email' => 'required|string|email:dns|max:255',
+            'email' => 'required|string|max:255',
             'password' => 'required|string|min:6',
         ]);
 

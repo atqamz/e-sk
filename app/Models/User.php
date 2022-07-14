@@ -18,6 +18,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'nip',
         'nama',
         'email',
         'password',
@@ -36,5 +37,10 @@ class User extends Authenticatable
     public function surats()
     {
         return $this->hasMany(Surat::class);
+    }
+
+    public function userTerkaits()
+    {
+        return $this->hasMany(UserTerkait::class);
     }
 }
